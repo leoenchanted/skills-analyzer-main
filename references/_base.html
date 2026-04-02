@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills Dashboard - COURSE_TITLE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,500&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Progress Bar -->
+  <div class="course-progress-container" id="courseProgress">
+    <div class="course-progress-fill" id="progressFill">
+      <div class="course-progress-handle"></div>
+      <div class="course-progress-tooltip" id="progressTooltip">0%</div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav-bar">
+    <div class="nav-left">
+      <span class="nav-logo">🔧 Skills Dashboard</span>
+    </div>
+    <div class="nav-right">
+      <button class="nav-btn active" data-section="overview">概览</button>
+      <button class="nav-btn" data-section="comparison">对比</button>
+      <button class="nav-btn" data-section="effects">副作用</button>
+      <button class="nav-btn" data-section="details">详情</button>
+      <button class="search-btn" id="searchBtn" title="搜索 (Ctrl+K)">🔍</button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- MODULE_CONTENT will be inserted here -->
+  </main>
+
+  <!-- Floating Summary Button -->
+  <button class="floating-summary-btn" id="summaryBtn" title="查看总结">📋</button>
+
+  <!-- Summary Modal -->
+  <div class="modal-overlay" id="summaryModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>📊 Skills 总结</h3>
+        <button class="modal-close" id="modalClose">✕</button>
+      </div>
+      <div class="modal-body" id="summaryBody">
+        <!-- Summary content will be inserted here -->
+      </div>
+      <div class="modal-footer">
+        <button class="modal-copy-btn" id="copyBtn">
+          <span>📋</span> 复制到剪贴板
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Modal -->
+  <div class="modal-overlay search-modal" id="searchModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>🔍 搜索 Skills</h3>
+        <button class="modal-close" id="searchModalClose">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="search-input-container">
+          <input type="text" class="search-input" id="searchInput" placeholder="输入关键词搜索..." autocomplete="off">
+          <button class="search-clear-btn" id="searchClear">清空</button>
+        </div>
+        <div class="search-stats" id="searchStats" style="display: none;">
+          找到 <strong id="resultCount">0</strong> 个结果
+        </div>
+        <div class="search-results" id="searchResults">
+          <div class="search-no-results">输入关键词开始搜索...</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
