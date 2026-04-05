@@ -141,4 +141,4 @@ MIT License
 
 ## 作者
 
-Created with ❤️ for the Claude Code community.
+Created with Leoenchanted & ai for the Claude Code community.
